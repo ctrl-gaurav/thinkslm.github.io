@@ -220,27 +220,18 @@
 
   <!-- Paper abstract -->
   <section class="section hero is-light">
-    <div class="container is-max-desktop">
+    <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Reasoning has long been viewed as an emergent property of large language models (LLMs), appearing at or
-              above a certain scale (∼100B parameters). However, recent studies challenge this assumption, showing that
-              small language models (SLMs) can also achieve competitive reasoning performance. SLMs are increasingly
-              favored for their efficiency and deployability. However, there is a lack of systematic study on the
-              reasoning abilities of diverse SLMs, including those trained from scratch or derived from LLMs through
-              quantization, pruning, and distillation. This raises a critical question: Can SLMs achieve reasoning
-              abilities comparable to LLMs? In this work, we systematically survey, benchmark, and analyze 72 SLMs from
-              six model families across 14 reasoning benchmarks. For reliable evaluation, we examine four evaluation
-              methods and compare four LLM judges against human evaluations on 800 data points. We repeat all
-              experiments three times to ensure a robust performance assessment. Additionally, we analyze the impact of
-              different prompting strategies in small models. Beyond accuracy, we also evaluate model robustness under
-              adversarial conditions and intermediate reasoning steps. Our findings challenge the assumption that
-              scaling is the only way to achieve strong reasoning. Instead, we foresee a future where SLMs with strong
-              reasoning capabilities can be developed through structured training or post-training compression. They can
-              serve as efficient alternatives to LLMs for reasoning-intensive tasks.
+                Reasoning has long been viewed as an emergent property of large language models (LLMs), appearing at or above a certain scale (~100B parameters). However, recent studies challenge this assumption, showing that small language models (SLMs) can also achieve competitive reasoning performance. SLMs are increasingly favored for their efficiency and deployability. However, there is a lack of systematic study on the reasoning abilities of diverse SLMs, including those trained from scratch or derived from LLMs through quantization, pruning, and distillation.
+                This raises a critical question: <em>Can SLMs achieve reasoning abilities comparable to LLMs?</em>
+                In this work, we systematically <strong>survey, benchmark, and analyze</strong> <strong>72</strong> SLMs from <strong>six</strong> model families across <strong>14</strong> reasoning benchmarks. For reliable evaluation, we examine <strong>four</strong> evaluation methods and compare <strong>four</strong> LLM judges against human evaluations on <strong>800</strong> data points. We repeat all experiments <strong>three</strong> times to ensure a robust performance assessment. Additionally, we analyze the impact of different prompting strategies in small models.
+                Beyond accuracy, we also evaluate model robustness under <strong>adversarial conditions</strong> and <strong>intermediate reasoning steps</strong>.
+                Our findings challenge the assumption that scaling is the only way to achieve strong reasoning. Instead, we foresee a future where SLMs with strong reasoning capabilities can be developed through structured training or post-training compression. They can serve as efficient alternatives to LLMs for reasoning tasks.
+              
             </p>
           </div>
         </div>
@@ -252,8 +243,10 @@
   <section class="section leaderboard-section">
     <div class="container is-max-fullhd">
       <h2 class="title is-3 has-text-centered">Small Language Models Reasoning Leaderboard</h2>
-      <p class="subtitle has-text-centered">Performance of small language models across 14 reasoning benchmarks and 6 sorting tasks along with GPU memory and disk size.
-        <br> The models are sorted by their overall average performance on the reasoning benchmarks.</p>
+      <p class="subtitle has-text-centered">Performance of small language models across 14 reasoning benchmarks and 6
+        sorting tasks along with GPU memory and disk size.
+        <br> The models are sorted by their overall average performance on the reasoning benchmarks.
+      </p>
       </p>
 
       <div class="leaderboard-controls">
@@ -1977,55 +1970,61 @@
     </div>
   </section>
 
-<!-- Key findings section -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Key Findings</h2>
-    <div class="columns is-centered">
-      <div class="column is-10">
-        <div class="content">
+  <!-- Key findings section -->
+  <section class="section hero is-light">
+    <div class="container is-max-widescreen">
+      <h2 class="title is-3 has-text-centered">Key Findings</h2>
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content">
 
-          <!-- 1 -->
-          <div class="box">
-            <h4 class="title is-4">Small ≠ Weak — 32 B Qwen rivals GPT‑4 Turbo</h4>
-            <p>Qwen 2.5‑32B matches GPT‑4‑Turbo on intermediate‑reasoning (MR‑GSM8K 55.6 vs 53.0) and reaches 95 % on GSM8K while using&nbsp;≈1⁄5 the parameters, overturning the “> 100 B for reasoning” myth. :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}</p>
+            <!-- 1 -->
+            <div class="box">
+              <h4 class="title is-4">Small ≠ Weak — 32 B Qwen rivals GPT‑4 Turbo!</h4>
+              <p>Qwen 2.5‑32B matches GPT‑4‑Turbo on intermediate‑reasoning (MR‑GSM8K 55.6 vs 53.0) and reaches 95 % on
+                GSM8K while using&nbsp;≈1⁄5 the parameters, overturning the “> 100 B for reasoning” myth.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="box">
+              <h4 class="title is-4">Quantization is (almost) free!</h4>
+              <p>4‑ to 8‑bit GPTQ cuts GPU memory by up to 75 % yet preserves ≥ 99 % of accuracy across GSM8K, ARC, CQA
+                and robustness benchmarks, enabling laptop‑scale deployment of formerly heavyweight models. </p>
+            </div>
+
+            <!-- 4 -->
+            <div class="box">
+              <h4 class="title is-4">Keep prompts simple!</h4>
+              <p>On GSM8K, direct I/O prompts outperform or equal Chain‑of‑Thought and multi‑shot variants; additional
+                “think‑step” instructions often confuse SLMs instead of helping them.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="box">
+              <h4 class="title is-4">Sequence length is the Achilles’ heel!</h4>
+              <p>Accuracy on sorting jumps from > 80 % (8‑item lists) to &lt; 40 % (32‑item mixed lists), and negative
+                numbers exacerbate errors, revealing a context‑length bottleneck for algorithmic reasoning.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="box">
+              <h4 class="title is-4">Robustness scales with size—but survives quantization!</h4>
+              <p>Larger SLMs (32B, 70B) remain the most resilient to adversarial GSM‑Plus inputs, yet their quantized
+                versions show negligible degradation, whereas pruned counterparts collapse.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="box">
+              <h4 class="title is-4">Pruning hurts, sometimes fatally!</h4>
+              <p>Weight‑pruned 8 B models lose 30–50 points on reasoning tasks and score ~0 on MR‑GSM8K, showing that
+                aggressive sparsification cripples logical consistency even after recovery fine‑tuning.</p>
+            </div>
+
           </div>
-
-          <!-- 2 -->
-          <div class="box">
-            <h4 class="title is-4">Quantization is (almost) free</h4>
-            <p>4‑ to 8‑bit GPTQ cuts GPU memory by up to 75 % yet preserves ≥ 99 % of accuracy across GSM8K, ARC, CQA and robustness benchmarks, enabling laptop‑scale deployment of formerly heavyweight models. :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}</p>
-          </div>
-
-          <!-- 3 -->
-          <div class="box">
-            <h4 class="title is-4">Pruning hurts, sometimes fatally</h4>
-            <p>Weight‑pruned 8 B models lose 30–50 points on reasoning tasks and score ~0 on MR‑GSM8K, showing that aggressive sparsification cripples logical consistency even after recovery fine‑tuning. :contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}</p>
-          </div>
-
-          <!-- 4 -->
-          <div class="box">
-            <h4 class="title is-4">Keep prompts simple</h4>
-            <p>On GSM8K, direct I/O prompts outperform or equal Chain‑of‑Thought and multi‑shot variants; additional “think‑step” instructions often confuse SLMs instead of helping them. :contentReference[oaicite:6]{index=6}&#8203;:contentReference[oaicite:7]{index=7}</p>
-          </div>
-
-          <!-- 5 -->
-          <div class="box">
-            <h4 class="title is-4">Sequence length is the Achilles’ heel</h4>
-            <p>Accuracy on sorting jumps from > 80 % (8‑item lists) to &lt; 40 % (32‑item mixed lists), and negative numbers exacerbate errors, revealing a context‑length bottleneck for algorithmic reasoning. :contentReference[oaicite:8]{index=8}&#8203;:contentReference[oaicite:9]{index=9}</p>
-          </div>
-
-          <!-- 6 -->
-          <div class="box">
-            <h4 class="title is-4">Robustness scales with size—but survives quantization</h4>
-            <p>Larger SLMs (32B, 70B) remain the most resilient to adversarial GSM‑Plus inputs, yet their quantized versions show negligible degradation, whereas pruned counterparts collapse. :contentReference[oaicite:10]{index=10}&#8203;:contentReference[oaicite:11]{index=11}</p>
-          </div>
-
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- BibTeX citation -->
