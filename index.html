@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description"
     content="Towards Reasoning Ability of Small Language Models - Benchmarking various SLMs on reasoning tasks">
-  <meta property="og:title" content="Towards Reasoning Ability of Small Language Models" />
+  <meta property="og:title" content="ThinkSLM: Towards Reasoning in Small Language Models" />
   <meta property="og:description"
     content="Research exploring the reasoning capabilities of Small Language Models across various benchmarks" />
   <meta property="og:url" content="https://your-website-url.com" />
@@ -13,7 +13,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <meta name="twitter:title" content="Towards Reasoning Ability of Small Language Models">
+  <meta name="twitter:title" content="ThinkSLM: Towards Reasoning in Small Language Models">
   <meta name="twitter:description"
     content="Research exploring the reasoning capabilities of Small Language Models across various benchmarks">
   <meta name="twitter:image" content="static/images/twitter_banner.png">
@@ -22,7 +22,7 @@
     content="small language models, reasoning, benchmarking, AI research, GSM8K, ARC, commonsenseQA">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Towards Reasoning Ability of Small Language Models</title>
+  <title>ThinkSLM: Towards Reasoning in Small Language Models</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -133,6 +133,177 @@
     .search-box button:hover {
       background-color: #364fc7;
     }
+
+    /* Enhanced UI Styles */
+    .hero {
+      background: white;
+      color: #363636;
+    }
+
+    .hero .title {
+      color: #363636;
+      text-shadow: none;
+    }
+
+    .hero .publication-authors {
+      color: #4a4a4a;
+    }
+
+    .publication-links .button {
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .publication-links .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Key Findings Enhanced Styles */
+    .key-findings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+
+    .finding-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .finding-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+
+    .finding-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .finding-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .finding-content {
+      flex: 1;
+    }
+
+    .finding-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #363636;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .finding-metric {
+      font-size: 1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .finding-description {
+      color: #4a4a4a;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* Leaderboard Enhancements */
+    .leaderboard-section {
+      background: white;
+    }
+
+    .leaderboard-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow-x: auto;
+      overflow-y: visible;
+    }
+
+    #leaderboardTable {
+      margin: 0;
+      min-width: 1200px;
+    }
+
+    #leaderboardTable thead {
+      background: #485fc7;
+      color: white;
+    }
+
+    #leaderboardTable thead th {
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 1rem 0.5rem;
+      white-space: nowrap;
+    }
+
+    #leaderboardTable tbody tr:hover {
+      background-color: rgba(102, 126, 234, 0.05);
+      transform: scale(1.001);
+      transition: all 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      .key-findings-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+      }
+
+      .finding-card {
+        padding: 1.5rem;
+      }
+
+      .finding-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .finding-title {
+        font-size: 1.1rem;
+      }
+
+      .finding-metric {
+        font-size: 0.9rem;
+      }
+
+      .finding-description {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 
@@ -143,26 +314,30 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Towards Reasoning Ability of Small Language Models</h1>
+            <h1 class="title is-1 publication-title">ThinkSLM: Towards Reasoning in Small Language Models</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=fT_GOxEAAAAJ&hl=en" target="_blank">Gaurav
-                  Srivastava</a><sup>1</sup>,</span>
+                  Srivastava</a><sup>♠</sup>,</span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=UhJZUHEAAAAJ&hl=en" target="_blank">Shuxiang
-                  Cao</a><sup>2,3</sup>,</span>
+                  Cao</a><sup>♥,♦</sup>,</span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=_IVJi6UAAAAJ&hl=en" target="_blank">Xuan
-                  Wang</a><sup>1</sup>
+                  Wang</a><sup>♠</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Department of Computer Science, Virginia Tech, Blacksburg, VA,
+              <span class="author-block"><sup>♠</sup>Department of Computer Science, Virginia Tech, Blacksburg, VA,
                 USA<br>
-                <sup>2</sup>Department of Physics, Clarendon Laboratory, University of Oxford, OX1 3PU, UK<br>
-                <sup>3</sup>NVIDIA Corporation<br>
+                <sup>♥</sup>Department of Physics, Clarendon Laboratory, University of Oxford, OX1 3PU, UK<br>
+                <sup>♦</sup>NVIDIA Corporation<br>
               </span>
+            </div>
+
+            <div class="has-text-centered" style="margin-top: 1rem;">
+              <span class="tag is-success is-medium">EMNLP 2025 Main Conference</span>
             </div>
 
             <div class="column has-text-centered">
@@ -210,8 +385,10 @@
                     <span>arXiv</span>
                   </a>
                 </span>
-              </div>
             </div>
+        </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -265,6 +442,7 @@
               <th class="quant-column">Quantization</th>
               <th class="resource-column">GPU Memory (GB)</th>
               <th class="resource-column">Disk Size (GB)</th>
+              <th class="task-column">Overall Average</th>
               <th class="task-column">GSM8K (Direct I/O)</th>
               <th class="task-column">GSM8K (COT)</th>
               <th class="task-column">GSM8K (5-Shot)</th>
@@ -280,7 +458,6 @@
               <th class="task-column">Sort-32 (+ve)</th>
               <th class="task-column">Sort-32 (mixed)</th>
               <th class="task-column">Sorting Average</th>
-              <th class="task-column">Overall Average</th>
             </tr>
           </thead>
           <tbody>
@@ -933,27 +1110,28 @@
               <td>59.78</td>
               <td>76.43</td>
             </tr>
-            <td>SmolLM2</td>
-            <td>1.7B</td>
-            <td>None</td>
-            <td>6.55</td>
-            <td>3.2</td>
-            <td>46.17</td>
-            <td>43.75</td>
-            <td>44.23</td>
-            <td>41.47</td>
-            <td>44.78</td>
-            <td>75.04</td>
-            <td>54.21</td>
-            <td>53.18</td>
-            <td>55.33</td>
-            <td>28.00</td>
-            <td>14.67</td>
-            <td>2.67</td>
-            <td>0.33</td>
-            <td>0.00</td>
-            <td>16.83</td>
-            <td>36.99</td>
+            <tr>
+              <td>SmolLM2</td>
+              <td>1.7B</td>
+              <td>None</td>
+              <td>6.55</td>
+              <td>3.2</td>
+              <td>46.17</td>
+              <td>43.75</td>
+              <td>44.23</td>
+              <td>41.47</td>
+              <td>44.78</td>
+              <td>75.04</td>
+              <td>54.21</td>
+              <td>53.18</td>
+              <td>55.33</td>
+              <td>28.00</td>
+              <td>14.67</td>
+              <td>2.67</td>
+              <td>0.33</td>
+              <td>0.00</td>
+              <td>16.83</td>
+              <td>36.99</td>
             </tr>
             <tr>
               <td>Minitron</td>
@@ -1974,58 +2152,84 @@
   <section class="section hero is-light">
     <div class="container is-max-widescreen">
       <h2 class="title is-3 has-text-centered">Key Findings</h2>
-      <div class="columns is-centered">
-        <div class="column is-10">
-          <div class="content">
+      <p class="subtitle has-text-centered is-6" style="margin-bottom: 3rem;">Breakthrough insights that challenge conventional wisdom about small language models and their reasoning capabilities</p>
+      <div class="key-findings-grid">
 
-            <!-- 1 -->
-            <div class="box">
-              <h4 class="title is-4">Small ≠ Weak — 32 B Qwen rivals GPT‑4 Turbo!</h4>
-              <p>Qwen 2.5‑32B matches GPT‑4‑Turbo on intermediate‑reasoning (MR‑GSM8K 55.6 vs 53.0) and reaches 95 % on
-                GSM8K while using&nbsp;≈1⁄5 the parameters, overturning the “> 100 B for reasoning” myth.</p>
-            </div>
-
-            <!-- 2 -->
-            <div class="box">
-              <h4 class="title is-4">Quantization is (almost) free!</h4>
-              <p>4‑ to 8‑bit GPTQ cuts GPU memory by up to 75 % yet preserves ≥ 99 % of accuracy across GSM8K, ARC, CQA
-                and robustness benchmarks, enabling laptop‑scale deployment of formerly heavyweight models. </p>
-            </div>
-
-            <!-- 4 -->
-            <div class="box">
-              <h4 class="title is-4">Keep prompts simple!</h4>
-              <p>On GSM8K, direct I/O prompts outperform or equal Chain‑of‑Thought and multi‑shot variants; additional
-                “think‑step” instructions often confuse SLMs instead of helping them.</p>
-            </div>
-
-            <!-- 5 -->
-            <div class="box">
-              <h4 class="title is-4">Sequence length is the Achilles’ heel!</h4>
-              <p>Accuracy on sorting jumps from > 80 % (8‑item lists) to &lt; 40 % (32‑item mixed lists), and negative
-                numbers exacerbate errors, revealing a context‑length bottleneck for algorithmic reasoning.</p>
-            </div>
-
-            <!-- 6 -->
-            <div class="box">
-              <h4 class="title is-4">Robustness scales with size—but survives quantization!</h4>
-              <p>Larger SLMs (32B, 70B) remain the most resilient to adversarial GSM‑Plus inputs, yet their quantized
-                versions show negligible degradation, whereas pruned counterparts collapse.</p>
-            </div>
-
-            <!-- 3 -->
-            <div class="box">
-              <h4 class="title is-4">Pruning hurts, sometimes fatally!</h4>
-              <p>Weight‑pruned 8 B models lose 30–50 points on reasoning tasks and score ~0 on MR‑GSM8K, showing that
-                aggressive sparsification cripples logical consistency even after recovery fine‑tuning.</p>
-            </div>
-
+        <!-- Finding 1: Small ≠ Weak -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Small ≠ Weak</h3>
+            <div class="finding-metric">32B Qwen Rivals GPT-4 Turbo</div>
+            <p class="finding-description">Qwen 2.5-32B matches GPT-4-Turbo on intermediate-reasoning (MR-GSM8K 55.6 vs 53.0) and reaches 95% on GSM8K while using approximately 1/5 the parameters, overturning the "> 100B for reasoning" myth.</p>
           </div>
         </div>
+
+        <!-- Finding 2: Quantization is Free -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-compress-alt"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Quantization is Free</h3>
+            <div class="finding-metric">75% Memory Reduction</div>
+            <p class="finding-description">4- to 8-bit GPTQ cuts GPU memory by up to 75% yet preserves ≥ 99% of accuracy across GSM8K, ARC, CQA and robustness benchmarks, enabling laptop-scale deployment of formerly heavyweight models.</p>
+          </div>
+        </div>
+
+        <!-- Finding 3: Keep Prompts Simple -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Keep Prompts Simple</h3>
+            <div class="finding-metric">Direct I/O Wins</div>
+            <p class="finding-description">On GSM8K, direct I/O prompts outperform or equal Chain-of-Thought and multi-shot variants; additional "think-step" instructions often confuse SLMs instead of helping them.</p>
+          </div>
+        </div>
+
+        <!-- Finding 4: Sequence Length Limitation -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-ruler"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Sequence Length Limitation</h3>
+            <div class="finding-metric">80% → 40% Drop</div>
+            <p class="finding-description">Accuracy on sorting jumps from > 80% (8-item lists) to < 40% (32-item mixed lists), and negative numbers exacerbate errors, revealing a context-length bottleneck for algorithmic reasoning.</p>
+          </div>
+        </div>
+
+        <!-- Finding 5: Robustness Scales -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Robustness Scales</h3>
+            <div class="finding-metric">Size Matters for Defense</div>
+            <p class="finding-description">Larger SLMs (32B, 70B) remain the most resilient to adversarial GSM-Plus inputs, yet their quantized versions show negligible degradation, whereas pruned counterparts collapse.</p>
+          </div>
+        </div>
+
+        <!-- Finding 6: Pruning Hurts -->
+        <div class="finding-card">
+          <div class="finding-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="finding-content">
+            <h3 class="finding-title">Pruning Hurts</h3>
+            <div class="finding-metric">30-50 Point Loss</div>
+            <p class="finding-description">Weight-pruned 8B models lose 30-50 points on reasoning tasks and score ~0 on MR-GSM8K, showing that aggressive sparsification cripples logical consistency even after recovery fine-tuning.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
-
 
   <!-- BibTeX citation -->
   <section class="section" id="BibTeX">
